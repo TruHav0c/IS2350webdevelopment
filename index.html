@@ -51,7 +51,31 @@
   <li>Professional work published in a book	- Feb. 12th. 2024</li>
   <li>Señor Worker Achievement - Oct. 17th, 2025</li>
 </ul>
-  
+  <h2 class="text-center my-4">Contact Me</h2>
+  <form id="contactForm" class="mx-auto" style="max-width: 500px;">
+    <div class="mb-3">
+      <label for="fullName" class="form-label">Full Name</label>
+      <input type="text" class="form-field form-control" id="fullName" placeholder="Enter your full name" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" rows="4" placeholder="enter your message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Contact me</button>
+  </form>
 </div>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('fullName').value;
+      const msg = document.getElementById('message').value;
+
+      console.log("Guest Full Name:", name);
+      console.log("Message:", msg);
+
+      this.reset()
+    });
+  </script>
 </body>
 </html>
